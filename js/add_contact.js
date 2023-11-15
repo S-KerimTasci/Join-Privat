@@ -367,3 +367,14 @@ function showHideOverlay(x, y, z) {
   document.getElementById(z).classList.add(x);
   document.getElementById(z).classList.remove(y);
 }
+
+/**
+ * 
+ * @param {id} x id of the contact that must stay highlighted
+ */
+function stayHighlighted(x){
+  for (let i = 0; i < contactJSONBE.length-1; i++) {
+    document.getElementById(`contact${i}`).classList.remove('contact-highlight')
+  };
+  document.getElementById(x).classList.add('contact-highlight')
+}

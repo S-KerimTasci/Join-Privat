@@ -343,6 +343,12 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+    cursor: pointer;
+}
+
+.contact-highlight{
+    background-color: #2A3647;
+    color: white;
 }
 
 .nameDiv {

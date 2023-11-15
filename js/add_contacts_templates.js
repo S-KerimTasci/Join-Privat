@@ -6,9 +6,9 @@
  * @param {number} contactIndex - The index of the given contact JSON
  * @returns The HTML template for the contact that is displayed in the contactlist 
  */
-function generateContactHTML(contact, contactIndex) {
+function generateContactHTML(contact, contactIndex,) {
     return `
-        <div class="contact" onclick="showContactInfo(${contactIndex})">
+        <div id="contact${contactIndex}" class="contact" onclick="showContactInfo(${contactIndex}), stayHighlighted('contact${contactIndex}')">
             <div class="circle" style="background-color: ${contact.bgColor};">${contact.initials}</div>
             <div class="nameDiv">
                 <span class="textcap">${contact.name}</span>
