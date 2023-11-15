@@ -109,7 +109,7 @@ function changeStatus(task) {
 }
 
 /**
- * Tih is the search and render function for the tasks. It call the search function and renders the result
+ * This is the search and render function for the tasks. It call the search function and renders the result
  */
 function searchTask() {
     let search = document.getElementById('idBoardSearch').value;
@@ -127,7 +127,7 @@ function searchFunction(search) {
     searchTaskObj = [];
     let searchIndex = 0;
     for (let i = 0; i < taskJson.length; i++) {
-        if (taskJson[i].headline.toLowerCase().includes(search)) {
+        if (taskJson[i].headline.toLowerCase().includes(search) || taskJson[i].description.toLowerCase().includes(search)) {
             searchTaskObj[searchIndex] = taskJson[i];
             searchIndex++;
         }
