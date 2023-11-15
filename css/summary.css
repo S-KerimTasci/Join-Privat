@@ -32,6 +32,7 @@
 .taskOverviewSize {
     height: calc(100vh - 340px);
     overflow-y: auto;
+    padding-bottom: 30px;
 }
 
 .taskOvContainer {
