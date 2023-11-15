@@ -12,7 +12,7 @@ function initAnimation() {
         animation.style.display = 'none';
         animationImg.style.display = 'none';
         //animation.classList.remove('d-none')
-    }, 2400);
+    }, 2000);
 }
 
 
@@ -25,7 +25,7 @@ function initAnimationResponsiv() {
     setTimeout(function () {
         animation.style.display = 'none';
         animationImg.style.display = 'none';
-    }, 2400);
+    }, 2000);
 }
 
 
