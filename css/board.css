@@ -55,10 +55,6 @@ body {
     padding: 5px;
 }
 
-.taskContainer::-webkit-scrollbar {
-    height: 10px;
-}
-
 .footer {
     /* brauch ich hier, weil der Footer normal auf position fixed eingestellt ist  */
     position: static !important;
