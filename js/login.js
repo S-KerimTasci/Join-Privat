@@ -13,7 +13,7 @@ function initAnimation() {
         setTimeout(function () {
             animation.style.display = 'none';
             animationImg.style.display = 'none';
-        }, 2000);
+        }, 1900);
     } else {
         document.getElementById('initAnimationResponsiv').classList.add('d-none')
         let animation = document.getElementById('initAnimation');
