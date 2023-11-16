@@ -5,25 +5,25 @@ let users = [];
  *  animated logo in the desktop view
  */
 function initAnimation() {
+    let animation = document.getElementById('initAnimation');
+    let animationImg = document.getElementById('initAnimationImg');
+    setTimeout(function () {
+        animation.style.display = 'none';
+        animationImg.style.display = 'none';
+    }, 1800);
+}
 
-    if (window.innerWidth > 830) {
-        document.getElementById('initAnimation').classList.add('d-none')
-        let animation = document.getElementById('initAnimationResponsiv');
-        let animationImg = document.getElementById('initAnimationImgResponsiv');
-        setTimeout(function () {
-            animation.style.display = 'none';
-            animationImg.style.display = 'none';
-        }, 2000);
-    } else {
-        document.getElementById('initAnimationResponsiv').classList.add('d-none')
-        let animation = document.getElementById('initAnimation');
-        let animationImg = document.getElementById('initAnimationImg');
-        setTimeout(function () {
-            animation.style.display = 'none';
-            animationImg.style.display = 'none';
-        }, 2250);
-    }
 
+/**
+ *  animated logo in the mobile view
+ */
+function initAnimationResponsiv() {
+    let animation = document.getElementById('initAnimationResponsiv');
+    let animationImg = document.getElementById('initAnimationImgResponsiv');
+    setTimeout(function () {
+        animation.style.display = 'none';
+        animationImg.style.display = 'none';
+    }, 1800);
 }
 
 
