@@ -99,6 +99,10 @@ async function addContactViaEditOverlay(i) {
   await setItem(KEY_for_JSON_CONTACS, contactJSONBE);
   closeOvelayAfterNewContact();
   createButton.disabled = false;
+  setTimeout(() => {
+    stayHighlighted(`contact${contactJSONBE.length-1}`)
+  }, 100);
+
 }
 
 
@@ -369,12 +373,21 @@ function showHideOverlay(x, y, z) {
 }
 
 /**
+ * removes the highlght from all contacts 
+ * 
+ */
+function removeHighlight() {
+  for (let i = 0; i < contactJSONBE.length; i++) {
+    document.getElementById(`contact${i}`).classList.remove('contact-highlight')
+  };
+}
+
+
+/**
  * 
  * @param {id} x id of the contact that must stay highlighted
  */
-function stayHighlighted(x){
-  for (let i = 0; i < contactJSONBE.length-1; i++) {
-    document.getElementById(`contact${i}`).classList.remove('contact-highlight')
-  };
+function stayHighlighted(x) {
+  removeHighlight()
   document.getElementById(x).classList.add('contact-highlight')
 }
