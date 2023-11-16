@@ -68,7 +68,7 @@ function selectionHTML(taskStatus, taskNr) {
     for (let i = 0; i < statusArr.length; i++) {
         if (taskStatus !== statusArr[i]) {
             htmlOptions += `<option value="${statusArr[i]}">${statusArr[i]}</option>`;
-        }  
+        }
     }
     document.getElementById('idChangeStatus' + taskNr).innerHTML = htmlOptions;
 }
@@ -142,7 +142,7 @@ function subTaskBarProgress(doneSubTasks, subTaskTotal, taskNr) {
     if (subTaskTotal != 0) {
         faktor = doneSubTasks / subTaskTotal;
         document.getElementById('idSingleTaskSubProgress' + taskNr).style.width = Math.round(128 * faktor) + 'px';
-        
+
     } else {
         document.getElementById('idSingleTaskSubProgress' + taskNr).style.width = 0;
     }
@@ -159,10 +159,17 @@ function taskMember(arrMember, taskNr) {
     for (let i = 0; i < 7; i++) {
         const member = contactJSON.find(contact => contact.name === arrMember[i]);
         if (member) {
-            const membInitials = member.initials;
-            const memberColor = member.bgColor.slice(1);
-            const memberSingleTask = `<div id="idMemberSingleTask${taskNr}_${i}" class="memberDisk memberBgColor${memberColor}">${membInitials}</div>`;
-            document.getElementById('idSingleTaskMember' + taskNr).innerHTML += memberSingleTask;
+            if (i == 6) {
+                const memberColor = member.bgColor.slice(1);
+                const memberSingleTask = `<div id="idMemberSingleTask${taskNr}_${i}" class="memberDisk memberBgColor${memberColor}">+${arrMember.length - 7}</div>`;
+                document.getElementById('idSingleTaskMember' + taskNr).innerHTML += memberSingleTask;
+            } else {
+                const membInitials = member.initials;
+                const memberColor = member.bgColor.slice(1);
+                const memberSingleTask = `<div id="idMemberSingleTask${taskNr}_${i}" class="memberDisk memberBgColor${memberColor}">${membInitials}</div>`;
+                document.getElementById('idSingleTaskMember' + taskNr).innerHTML += memberSingleTask;
+            }
+
         }
     }
 }
