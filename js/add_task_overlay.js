@@ -61,6 +61,18 @@ function showUserNames(desk) {
         toggleDivUsrDropVsMemberDisk(desk);
         expanded = true;
     } else {
+        hideUserNames(desk)
+    }
+}
+
+
+/**
+ * This function is for hiding the contactlist
+ * 
+ * @param {string} desk for identifying the correct assingedTo element
+ */
+function hideUserNames(desk){
+    if (expanded) {
         toggleDivUsrDropVsMemberDisk(desk);
         document.getElementById('idSelectedUserAddTask' + desk).innerHTML = taskOverlayMemberDiskContainer();
         expanded = false;
