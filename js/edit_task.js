@@ -1,5 +1,3 @@
-
-
 async function renderEditTask(taskNr) {
     activTaskNumber = taskNr;
     await openAddtaskOverlay();

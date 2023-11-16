@@ -1,4 +1,3 @@
-
 /**
  * This function confirms sending the email
  */

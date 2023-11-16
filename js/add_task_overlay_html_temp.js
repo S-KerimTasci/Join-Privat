@@ -161,9 +161,3 @@ function subtaskHTML(count) {
         </div>
     </li>`
 }
-
-/* function addTaskpopupHTML() {
-    return `<div id="idAddTaskPopup" class="addTaskPopup">
-        <p>Task successfully created!</p>
-        </div>`
-} */
