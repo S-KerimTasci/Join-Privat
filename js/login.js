@@ -6,14 +6,14 @@ let users = [];
  */
 function initAnimation() {
 
-    if (window.innerWidth < 830) {
+    if (window.innerWidth > 830) {
         document.getElementById('initAnimation').classList.add('d-none')
         let animation = document.getElementById('initAnimationResponsiv');
         let animationImg = document.getElementById('initAnimationImgResponsiv');
         setTimeout(function () {
             animation.style.display = 'none';
             animationImg.style.display = 'none';
-        }, 1900);
+        }, 2000);
     } else {
         document.getElementById('initAnimationResponsiv').classList.add('d-none')
         let animation = document.getElementById('initAnimation');
