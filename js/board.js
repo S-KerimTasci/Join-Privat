@@ -38,6 +38,9 @@ function renderStatusContainer(status, taskContainerId, jsonObj) {
         if (status == activeTask.status) {
             document.getElementById(taskContainerId).innerHTML += taskTemplate(i);
             callFunctionForSingleTask(activeTask, i);
+            if (jsonObj[i].subTaskTotal == 0) {
+                document.getElementById(`idTaskSubTask${i}`).classList.add('d-none')
+            }
             singleTaskCount++;
         }
     }

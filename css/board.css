@@ -4,6 +4,10 @@ body {
     overflow: hidden;
 }
 
+.d-none{
+    display: none !important;
+}
+
 .BackgroundContainer {
     height: 100vh;
     display: flex;
