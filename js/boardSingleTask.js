@@ -156,7 +156,7 @@ function subTaskBarProgress(doneSubTasks, subTaskTotal, taskNr) {
  * @param {string} taskNr - used to find the specific element id
  */
 function taskMember(arrMember, taskNr) {
-    for (let i = 0; i < arrMember.length; i++) {
+    for (let i = 0; i < 7; i++) {
         const member = contactJSON.find(contact => contact.name === arrMember[i]);
         if (member) {
             const membInitials = member.initials;
