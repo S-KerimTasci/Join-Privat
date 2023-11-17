@@ -161,7 +161,7 @@ function taskMember(arrMember, taskNr) {
         if (member) {
             if (i == 6) {
                 const memberColor = member.bgColor.slice(1);
-                const memberSingleTask = `<div id="idMemberSingleTask${taskNr}_${i}" class="memberDisk memberBgColor${memberColor}">+${arrMember.length - 7}</div>`;
+                const memberSingleTask = `<div id="idMemberSingleTask${taskNr}_${i}" class="memberDisk memberBgColor${memberColor}">+${arrMember.length - 6}</div>`;
                 document.getElementById('idSingleTaskMember' + taskNr).innerHTML += memberSingleTask;
             } else {
                 const membInitials = member.initials;
