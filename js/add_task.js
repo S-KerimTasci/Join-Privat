@@ -73,7 +73,6 @@ function highlight(x) {
 
 function setPrio(x) {
     currentPrio = x;
-    console.log(currentPrio)
 }
 
 function removeHighlight() {

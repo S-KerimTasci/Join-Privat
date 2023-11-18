@@ -1,3 +1,12 @@
+let conDesk = document.getElementById('idChkSelectMultUserOuterConDesk');
+    let con = document.getElementById('idChkSelectMultUserOuterCon');
+    let conDeskOv = document.getElementById('idChkSelectMultUserOuterConDeskOv');
+    let conOv = document.getElementById('idChkSelectMultUserOuterConOv')
+    let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
+    let selectedUserAddTaskOv = document.getElementById('idSelectedUserAddTaskOv');
+    let selectedUserAddTaskDesk = document.getElementById('idSelectedUserAddTaskDesk');
+    let selectedUserAddTask = document.getElementById('idSelectedUserAddTask');
+
 /**
  * Clears the add task form 
  */
@@ -44,11 +53,6 @@ function clearSubtasks() {
  * Emptys the innerHTML of the div where the selcted contacts are displayed
  */
 function emptyContactHTML() {
-    let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
-    let selectedUserAddTaskOv = document.getElementById('idSelectedUserAddTaskOv');
-    let selectedUserAddTaskDesk = document.getElementById('idSelectedUserAddTaskDesk');
-    let selectedUserAddTask = document.getElementById('idSelectedUserAddTask');
-
     if (selectedUserAddTaskDeskOv) {
         selectedUserAddTaskDeskOv.innerHTML = '';
     }
@@ -70,15 +74,11 @@ function emptyContactHTML() {
  * Hides the list of contacts
  */
 function hideContactList() {
-    let conDesk = document.getElementById('idChkSelectMultUserOuterConDesk');
-    let con = document.getElementById('idChkSelectMultUserOuterCon');
     let conDeskOv = document.getElementById('idChkSelectMultUserOuterConDeskOv');
-    let conOv = document.getElementById('idChkSelectMultUserOuterConOv')
+    let conOv = document.getElementById('idChkSelectMultUserOuterConOv');
     let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
     let selectedUserAddTaskOv = document.getElementById('idSelectedUserAddTaskOv');
-    let selectedUserAddTaskDesk = document.getElementById('idSelectedUserAddTaskDesk');
-    let selectedUserAddTask = document.getElementById('idSelectedUserAddTask');
-
+    
     if (conDesk) {
         conDesk.classList.add('d-none')
     }

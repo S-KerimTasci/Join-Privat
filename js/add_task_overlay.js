@@ -74,7 +74,6 @@ function showUserNames(desk) {
 function hideUserNames(desk) {
     if (expanded) {
         toggleDivUsrDropVsMemberDisk(desk);
-        console.log(document.getElementById('idSelectedUserAddTask' + desk))
         if ((document.getElementById('idSelectedUserAddTask') + desk)) {
             document.getElementById('idSelectedUserAddTask' + desk).innerHTML = taskOverlayMemberDiskContainer();
             expanded = false;
