@@ -20,60 +20,16 @@ function clearForm() {
  * Clears the selected contacts in the add task form 
  */
 function clearSelectedContacts() {
-    
-
-    // Uncheck all checkboxes
     let checkboxes = document.querySelectorAll('.chkHeight');
     checkboxes.forEach((checkbox) => {
         checkbox.checked = false;
     });
 
-    // Reset the task2.member array
     task2.member = [];
 
-    let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
-    if (selectedUserAddTaskDeskOv) {
-        selectedUserAddTaskDeskOv.innerHTML = '';
-    }
+    emptyContactHTML();
 
-    let selectedUserAddTaskOv = document.getElementById('idSelectedUserAddTaskOv');
-    if (selectedUserAddTaskOv) {
-        selectedUserAddTaskOv.innerHTML = '';
-    }
-
-    let selectedUserAddTaskDesk = document.getElementById('idSelectedUserAddTaskDesk');
-    if (selectedUserAddTaskDesk) {
-        selectedUserAddTaskDesk.innerHTML = '';
-    }
-
-    let selectedUserAddTask = document.getElementById('idSelectedUserAddTask');
-    if (selectedUserAddTask) {
-        selectedUserAddTask.innerHTML = '';
-    }
-
-    let conDesk = document.getElementById('idChkSelectMultUserOuterConDesk');
-    if (conDesk) {
-        conDesk.classList.add('d-none') 
-    }
-    if (selectedUserAddTask) {
-        selectedUserAddTaskDesk.classList.remove('d-none')
-    }
-    
-    let xy = document.getElementById('idChkSelectMultUserOuterCon');
-    if (xy) {
-        xy.classList.add('d-none') 
-    }
-    if (selectedUserAddTask) {
-        selectedUserAddTask.classList.remove('d-none')
-    }
-
-    let zit = document.getElementById('idChkSelectMultUserOuterConDeskOv')
-    if (zit) {
-        zit.classList.add('d-none')
-    }
-    if (selectedUserAddTaskDeskOv) {
-        selectedUserAddTaskDeskOv.classList.remove('d-none')
-    }
+    hideContactList();
 }
 
 /**
@@ -83,4 +39,71 @@ function clearSubtasks() {
     document.getElementById('idSubtaskAddTaskOv').value = '';
     document.getElementById('idRenderedSubtaskAddTaskOv').innerHTML = '';
     subtaskObj = [];
+}
+/**
+ * Emptys the innerHTML of the div where the selcted contacts are displayed
+ */
+function emptyContactHTML() {
+    let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
+    let selectedUserAddTaskOv = document.getElementById('idSelectedUserAddTaskOv');
+    let selectedUserAddTaskDesk = document.getElementById('idSelectedUserAddTaskDesk');
+    let selectedUserAddTask = document.getElementById('idSelectedUserAddTask');
+
+    if (selectedUserAddTaskDeskOv) {
+        selectedUserAddTaskDeskOv.innerHTML = '';
+    }
+
+    if (selectedUserAddTaskOv) {
+        selectedUserAddTaskOv.innerHTML = '';
+    }
+
+    if (selectedUserAddTaskDesk) {
+        selectedUserAddTaskDesk.innerHTML = '';
+    }
+
+    if (selectedUserAddTask) {
+        selectedUserAddTask.innerHTML = '';
+    }
+}
+
+/**
+ * Hides the list of contacts
+ */
+function hideContactList() {
+    let conDesk = document.getElementById('idChkSelectMultUserOuterConDesk');
+    let con = document.getElementById('idChkSelectMultUserOuterCon');
+    let conDeskOv = document.getElementById('idChkSelectMultUserOuterConDeskOv');
+    let conOv = document.getElementById('idChkSelectMultUserOuterConOv')
+    let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
+    let selectedUserAddTaskOv = document.getElementById('idSelectedUserAddTaskOv');
+    let selectedUserAddTaskDesk = document.getElementById('idSelectedUserAddTaskDesk');
+    let selectedUserAddTask = document.getElementById('idSelectedUserAddTask');
+
+    if (conDesk) {
+        conDesk.classList.add('d-none')
+    }
+    if (selectedUserAddTask) {
+        selectedUserAddTaskDesk.classList.remove('d-none')
+    }
+
+    if (conOv) {
+        conOv.classList.add('d-none')
+    }
+    if (selectedUserAddTaskOv) {
+        selectedUserAddTaskOv.classList.remove('d-none')
+    }
+
+    if (con) {
+        con.classList.add('d-none')
+    }
+    if (selectedUserAddTask) {
+        selectedUserAddTask.classList.remove('d-none')
+    }
+
+    if (conDeskOv) {
+        conDeskOv.classList.add('d-none')
+    }
+    if (selectedUserAddTaskDeskOv) {
+        selectedUserAddTaskDeskOv.classList.remove('d-none')
+    }
 }
