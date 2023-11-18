@@ -33,6 +33,7 @@
     <script src="../js/add_task_overlay.js" defer></script>
     <script src="../js/add_task_overlay_html_temp.js" defer></script>
     <script src="../js/edit_task.js" defer></script>
+    <script src="../js/add_task_clear.js"></script>
 
 </head>
 
@@ -161,6 +162,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <div id="idClearContainerAddTaskOv" class="clearContainerAddTaskOv d-flex justify-content-start align-items-center">
+                        <button id="idClearButtonAddTaskOv" onclick="clearForm()" class="clearButton">Clear</button>
+                    </div>
+                    <!-- 'idSelectedUserAddTaskDesk' -->
                     <div id="idSubmitContainerAddTaskOv" onsubmit="storeNewTask(false)"
                         class="submitContainerAddTaskOv d-flex justify-content-end align-items-center">
                         <button id="idSubmitButtonAddTaskOv" type="onsubmit" class="taskButton">Create Task <img

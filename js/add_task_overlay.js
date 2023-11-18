@@ -71,11 +71,14 @@ function showUserNames(desk) {
  * 
  * @param {string} desk for identifying the correct assingedTo element
  */
-function hideUserNames(desk){
+function hideUserNames(desk) {
     if (expanded) {
         toggleDivUsrDropVsMemberDisk(desk);
-        document.getElementById('idSelectedUserAddTask' + desk).innerHTML = taskOverlayMemberDiskContainer();
-        expanded = false;
+        console.log(document.getElementById('idSelectedUserAddTask' + desk))
+        if ((document.getElementById('idSelectedUserAddTask') + desk)) {
+            document.getElementById('idSelectedUserAddTask' + desk).innerHTML = taskOverlayMemberDiskContainer();
+            expanded = false;
+        }
     }
 }
 
@@ -87,8 +90,10 @@ function hideUserNames(desk){
 function toggleDivUsrDropVsMemberDisk(desk) {
     let checkboxes = document.getElementById('idChkSelectMultUserOuterCon' + desk);
     let memberDisks = document.getElementById('idSelectedUserAddTask' + desk);
-    memberDisks.classList.toggle('d-none');
-    checkboxes.classList.toggle('d-none');
+    if (!(checkboxes == null) && !(memberDisks == null)) {
+        memberDisks.classList.toggle('d-none');
+        checkboxes.classList.toggle('d-none');
+    }
 }
 
 /**
