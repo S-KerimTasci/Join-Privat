@@ -43,7 +43,7 @@
             <header w3-include-html="../assets/templates/headerTemplate.html"></header>
             <section id="idBgAddTaskOverlay" class="bgAddTask">
                 <form id="idAddTaskForm" onsubmit="storeNewTask(); return false" class="addTaskGeneralSettings"
-                    onclick="innerClick(event)" autocomplete="off">
+                    onclick="innerClick(event), closeContactListOnClick()" autocomplete="off">
                     <h1 id="idHeadlineAddTask" class="headlineAddTaskOv">Add Task</h1>
                     <div id="idContentContainerAddTaskOv" class="contentContainerAddTask">
                         <div id="idContentDeskLeftContainerAddTaskOv" class="ContentDeskContainerAddTask">
@@ -63,7 +63,7 @@
                             </div>
                             <div id="idInputAssignedToContainerDesktopAddTaskOv" class="assingToDesk mt-3 flex-column">
                                 <label for="idInputAssignedToAddTaskDeskOv">Assigned To</label>
-                                <div id="idSelectMultUserDesk" class="selectMultUserOv" onclick="showUserNames('Desk')">
+                                <div id="idSelectMultUserDesk" class="selectMultUserOv" onclick="showUserNames('Desk',event)">
                                     <input type="search" id="idInputAssignedToAddTaskDeskOv"
                                         class="selectContainerOv selectArrow" placeholder="Select contacts to assign"
                                         onkeypress="return event.keyCode != 13;">
@@ -123,7 +123,7 @@
                             </div>
                             <div id="idInputAssignedToContainerAddTaskOv" class="assingToMob mt-3 d-flex flex-column">
                                 <label for="idInputAssignedToAddTaskOv">Assigned To</label>
-                                <div id="idSelectMultUserOv" class="selectMultUserOv" onclick="showUserNames('')">
+                                <div id="idSelectMultUserOv" class="selectMultUserOv" onclick="showUserNames('',event)">
                                     <!-- ; renderTaskMember() -->
                                     <input type="search" id="idInputAssignedToAddTaskOv"
                                         class="selectContainerOv selectArrow" placeholder="Select contacts to assign"

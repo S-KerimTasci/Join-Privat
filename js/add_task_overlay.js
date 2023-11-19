@@ -56,7 +56,8 @@ function removeHighlight() {
  * 
  * @param {string} desk for identifying the correct assingedTo element
  */
-function showUserNames(desk) {
+function showUserNames(desk, event) {
+    event.stopPropagation();
     if (!expanded) {
         toggleDivUsrDropVsMemberDisk(desk);
         expanded = true;
@@ -320,7 +321,8 @@ async function loadContatsToAssinged(overlay) {
  * 
  * @param {number} chkNr - id of checkbox
  */
-function toggleChkBox(chkNr) {
+function toggleChkBox(chkNr, event) {
+    event.stopPropagation();
     let chkChecked = document.getElementById('idAssingedToChk' + chkNr);
     if (chkChecked.checked) {
         chkChecked.checked = false; toggleselectedAssignTo(chkNr);

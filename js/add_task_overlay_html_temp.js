@@ -1,7 +1,7 @@
 function htmlAddTaskOverlay() {
     document.getElementById('idAddTaskOverlay').innerHTML = /*html*/`
     <section id="idBgAddTaskOverlay" class="backgroundAddTaskOverlay" onclick="closeAddTaskOv('idBgAddTaskOverlay')">
-        <form id="idAddTaskForm" onsubmit="storeNewTask(true); return false" class="addTaskOvGeneralSettings" onclick="innerClick(event)" autocomplete="off">
+        <form id="idAddTaskForm" onsubmit="storeNewTask(true); return false" class="addTaskOvGeneralSettings" onclick="innerClick(event), closeContactListOnClick()" autocomplete="off">
             <div class="d-flex justify-content-between align-items-center headlineAddTaskOv"> 
                 <h1 id="idHeadlineAddTask" class="">Add Task</h1>
                 <img onclick="closeAddTaskOv('idBgAddTaskOverlay')" class="closeResponsive" src="../assets/img/cancel_contactOverlay.svg">
@@ -22,7 +22,7 @@ function htmlAddTaskOverlay() {
                     </div>
                     <div id="idInputAssignedToContainerDesktopAddTaskOv" class="assingToDesk mt-3 flex-column"> 
                         <label for="idInputAssignedToAddTaskDeskOv">Assigned To</label>
-                        <div id="idSelectMultUserDeskOv" class="selectMultUserOv" onclick="showUserNames('DeskOv')"> 
+                        <div id="idSelectMultUserDeskOv" class="selectMultUserOv" onclick="showUserNames('DeskOv',event)"> 
                             <input type="text" id="idInputAssignedToAddTaskDeskOv" class="selectContainerOv selectArrow"
                                 placeholder="Select contacts to assign" onkeypress="return event.keyCode != 13;">
                         </div>
@@ -72,7 +72,7 @@ function htmlAddTaskOverlay() {
                     </div>
                     <div id="idInputAssignedToContainerAddTaskOv" class="assingToMob mt-3 d-flex flex-column">
                         <label for="idInputAssignedToAddTaskOv">Assigned To</label>
-                        <div id="idSelectMultUserOv" class="selectMultUserOv" onclick="showUserNames('Ov')"> 
+                        <div id="idSelectMultUserOv" class="selectMultUserOv" onclick="showUserNames('Ov',event)"> 
                             <input type="search" id="idInputAssignedToAddTaskOv" class="selectContainerOv selectArrow"
                                 placeholder="Select contacts to assign" onkeypress="return event.keyCode != 13;">
                         </div>
@@ -131,7 +131,7 @@ function userOvHTMLButton() {
 
 function userOvHTML(memberName, memberColor, memberinitials, i) {
     return `
-    <div id="idAssingedToCon${i}" class="assingedToMembers hoverAssingedTo" onclick="toggleChkBox(${i})">
+    <div id="idAssingedToCon${i}" class="assingedToMembers hoverAssingedTo" onclick="toggleChkBox(${i}, event)">
         <div id="idAssingedToInitialsOv${i}" class="memberDiskOv memberBgColor${memberColor}">${memberinitials}
         </div>
         <span id="idAssingedToName${i}" class="assignToName">${memberName}</span>
