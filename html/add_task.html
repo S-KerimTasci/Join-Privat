@@ -41,9 +41,9 @@
     <div id="idBackgroundContainer">
         <div id="idHeaderBody">
             <header w3-include-html="../assets/templates/headerTemplate.html"></header>
-            <section id="idBgAddTaskOverlay" class="bgAddTask">
+            <section id="idBgAddTaskOverlay" class="bgAddTask" onclick="closeContactListOnClick()">
                 <form id="idAddTaskForm" onsubmit="storeNewTask(); return false" class="addTaskGeneralSettings"
-                    onclick="innerClick(event), closeContactListOnClick()" autocomplete="off">
+                    onclick="innerClick(event)" autocomplete="off">
                     <h1 id="idHeadlineAddTask" class="headlineAddTaskOv">Add Task</h1>
                     <div id="idContentContainerAddTaskOv" class="contentContainerAddTask">
                         <div id="idContentDeskLeftContainerAddTaskOv" class="ContentDeskContainerAddTask">
