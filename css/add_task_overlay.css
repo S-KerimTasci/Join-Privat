@@ -346,6 +346,7 @@ body {
 .submitContainerAddTaskOv {
     height: 88px;
     padding: 16px;
+    gap: 16px
 }
 
 .addTaskPopup{

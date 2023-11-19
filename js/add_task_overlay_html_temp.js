@@ -104,12 +104,10 @@ function htmlAddTaskOverlay() {
                 </div>
             </div>
 
-            <div id="idClearContainerAddTaskOv" class="clearContainerAddTaskOv d-flex justify-content-start align-items-center">
-                <button id="idClearButtonAddTaskOv" onclick="clearForm()" class="clearButton">Clear</button>
-            </div>
             <!-- 'idSelectedUserAddTaskDeskOv' -->
             <div id="idSubmitContainerAddTaskOv" onsubmit="storeNewTask(true)"
                 class="submitContainerAddTaskOv d-flex justify-content-end align-items-center">
+                <button type="reset" class="clearButton" id="idClearButtonAddTaskOv" onclick="clearForm()">Clear <img src="../assets/img/cancel_contactOverlay.svg"></button>
                 <button id="idSubmitButtonAddTaskOv" type="submit" class="taskButton">Create Task <img
                         src="../assets/img/check.svg"></button>
             </div>
