@@ -26,7 +26,7 @@ function htmlAddTaskOverlay() {
                             <input type="text" id="idInputAssignedToAddTaskDeskOv" class="selectContainerOv selectArrow"
                                 placeholder="Select contacts to assign" onkeypress="return event.keyCode != 13;">
                         </div>
-                        <div id="idSelectedUserAddTaskDeskOv" class="d-flex"></div>
+                        <div id="idSelectedUserAddTaskDeskOv" class="d-flex overflow-auto"></div>
                         <div id="idChkSelectMultUserOuterConDeskOv" class=""> 
                             <div id="idCheckboxesSelectMultUserDeskOv" class="checkboxesSelectMultUserOv">
                             </div>
@@ -76,7 +76,7 @@ function htmlAddTaskOverlay() {
                             <input type="search" id="idInputAssignedToAddTaskOv" class="selectContainerOv selectArrow"
                                 placeholder="Select contacts to assign" onkeypress="return event.keyCode != 13;">
                         </div>
-                        <div id="idSelectedUserAddTaskOv" class="d-flex"></div>
+                        <div id="idSelectedUserAddTaskOv" class="d-flex overflow-auto"></div>
                         <div id="idChkSelectMultUserOuterConOv" class=""> 
                             <div id="idCheckboxesSelectMultUserOv" class="checkboxesSelectMultUserOv">
                             </div>
