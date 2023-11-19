@@ -53,6 +53,7 @@ function clearSubtasks() {
  * Emptys the innerHTML of the div where the selcted contacts are displayed
  */
 function emptyContactHTML() {
+    let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
     if (selectedUserAddTaskDeskOv) {
         selectedUserAddTaskDeskOv.innerHTML = '';
     }
@@ -79,6 +80,8 @@ function hideContactList() {
     let selectedUserAddTaskDeskOv = document.getElementById('idSelectedUserAddTaskDeskOv');
     let selectedUserAddTaskOv = document.getElementById('idSelectedUserAddTaskOv');
     
+    if (expanded) {
+           
     if (conDesk) {
         conDesk.classList.add('d-none')
     }
@@ -106,4 +109,6 @@ function hideContactList() {
     if (selectedUserAddTaskDeskOv) {
         selectedUserAddTaskDeskOv.classList.remove('d-none')
     }
+    expanded = false;
+}
 }
